@@ -1,6 +1,10 @@
-self.addEventListener("install",e=>{
-  e.waitUntil(caches.open("dartmaster-final-v1").then(c=>c.addAll(["/","/index.html","/styles.css","/app.js","/manifest.json"])));
+const CACHE_NAME = "dartmaster-cache-v2";
+const urlsToCache = ["index.html","app.js","styles.css","manifest.json"];
+
+self.addEventListener("install", e=>{
+  e.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(urlsToCache)));
 });
-self.addEventListener("fetch",e=>{
-  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
+
+self.addEventListener("fetch", e=>{
+  e.respondWith(caches.match(e.request).then(r=>r || fetch(e.request)));
 });
