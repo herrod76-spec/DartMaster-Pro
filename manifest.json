@@ -1,9 +1,11 @@
 {
-  "name":"DartMaster Pro Web Final",
-  "short_name":"DartMasterPro",
-  "start_url":".",
-  "display":"standalone",
-  "background_color":"#191970",
-  "theme_color":"#191970",
-  "icons":[{"src":"assets/icons/icon-192.png","sizes":"192x192","type":"image/png"}]
+  "name": "DartMaster Pro Web",
+  "short_name": "DartMaster",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#191970",
+  "theme_color": "#d4af37",
+  "icons": [
+    { "src": "favicon.ico", "sizes": "64x64", "type": "image/x-icon" }
+  ]
 }
